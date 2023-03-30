@@ -16,7 +16,17 @@ const setGoal = (req, res) => {
   res.status(200).json({ message: "New goal" });
 };
 
+/*
+@desc Update goal
+@route PUT /api/goals/:id
+@access Private
+*/
+const updateGoal = (req, res) => {
+  res.status(200).json({ message: `Update goal ${req.params.id}` });
+};
+
 module.exports = {
   getGoals,
-  setGoal
+  setGoal,
+  updateGoal
 };
