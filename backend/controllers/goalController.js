@@ -31,7 +31,7 @@ const updateGoal = (req, res) => {
 @access Private
 */
 const deleteGoal = (req, res) => {
-  res.status(200).json({ message: `Update goal ${req.params.id}` });
+  res.status(200).json({ message: `Delete goal ${req.params.id}` });
 };
 
 module.exports = {
