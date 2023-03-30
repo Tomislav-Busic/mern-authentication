@@ -9,7 +9,7 @@ const {
 
 router.route("/").get(getGoals).post(setGoal);
 
-router.route("/:id").post(updateGoal).delete(deleteGoal);
+router.route("/:id").put(updateGoal).delete(deleteGoal);
 
 /* router.get("/", getGoals);
 
