@@ -16,4 +16,13 @@ const loginUser = async (req, res) => {
   res.json({ message: "Login user" });
 };
 
+/*
+@desc Get user data
+@route GET /api/users/me
+@access Public
+*/
+const getMe = async (req, res) => {
+  res.json({ message: "User data" });
+};
+
 module.exports = { registerUser };
