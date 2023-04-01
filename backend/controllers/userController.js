@@ -25,4 +25,4 @@ const getMe = async (req, res) => {
   res.json({ message: "User data" });
 };
 
-module.exports = { registerUser };
+module.exports = { registerUser, loginUser, getMe };
