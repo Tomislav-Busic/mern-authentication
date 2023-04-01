@@ -24,4 +24,5 @@ npm i express mongoose colors dotenv path
 npm i -D nodemon
 npm i express-async-handler
 npm i bcryptjs
+npm i jsonwebtoken
 */
