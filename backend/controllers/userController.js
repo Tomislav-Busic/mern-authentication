@@ -52,22 +52,22 @@ const registerUser = asyncHandler(async (req, res) => {
 @access Public
 */
 const loginUser = asyncHandler(async (req, res) => {
-    const { email, password } = req.body;
+  const { email, password } = req.body;
 
-    // Check for user email and password
-    const user = await User.findOne({ email });
+  // Check for user email and password
+  const user = await User.findOne({ email });
 
-    if (user && (await bcrypt.compare(password, user.password))) {
-      res.json({
-        _id: user.id,
-        name: user.name,
-        email: user.email,
-      });
-    } else {
-      res.status(400);
-      throw new Error("Invalid credencials");
-    }
-
+  if (user && (await bcrypt.compare(password, user.password))) {
+    res.json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+    });
+  } else {
+    res.status(400);
+    throw new Error("Invalid credencials");
+  }
+  //
 });
 
 /*
