@@ -69,7 +69,6 @@ const loginUser = asyncHandler(async (req, res) => {
       throw new Error("Invalid credencials");
     }
 
-  res.json({ message: "Login user" });
 });
 
 /*
