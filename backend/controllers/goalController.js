@@ -53,6 +53,12 @@ const updateGoal = asyncHandler(async (req, res) => {
     throw new Error("User not found");
   }
 
+  // Make sure the logged in user matches the goal user
+  if (goal.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("User not authorized");
+  }
+
   // {new: true} will yust create it if it doesn't exist
   const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
